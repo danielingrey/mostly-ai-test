@@ -1,12 +1,13 @@
 import { Page } from "@playwright/test";
-import { Base } from "./base";
 
-export class LandingPage extends Base {
+export class LandingPage {
+    readonly page: Page;
+
     constructor(page: Page) {
-        super(page);
+        this.page = page;
     }
 
-    async goto() {
-        await super.goto("https://mostly.ai/");
+    async goto(url: string = "https://mostly.ai") {
+        await this.page.goto(url);
     }
 }

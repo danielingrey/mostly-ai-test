@@ -5,7 +5,7 @@ export class NavBarPage {
     readonly platformLink: Locator;
     readonly syntheticDataLink: Locator;
     readonly resourcesLink: Locator;
-    readonly companyLink: Locator;
+    public readonly companyLink: Locator;
     readonly pricingLink: Locator;
     readonly searchButton: Locator;
     readonly searchInput: Locator;
